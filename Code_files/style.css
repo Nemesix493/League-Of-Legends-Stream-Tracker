@@ -1,0 +1,16 @@
+@font-face{
+    font-family:"Beaufort for LOL";
+    src:url("https://developer.riotgames.com/Fonts/BeaufortforLOL-Bold.eot?#iefix");
+    src:url("https://developer.riotgames.com/Fonts/BeaufortforLOL-Bold.eot?#iefix") format("eot"),url("https://developer.riotgames.com/Fonts/BeaufortforLOL-Bold.woff") format("woff"),url("https://developer.riotgames.com/Fonts/BeaufortforLOL-Bold.ttf") format("truetype"),url("https://developer.riotgames.com/Fonts/BeaufortforLOL-Bold.svg#") format("svg");
+    font-weight:700;
+    font-style:normal;
+  }
+
+p {
+    font-size: 36px;
+    color:#FFFD;
+    font-family: "Beaufort for LOL", serif;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 2px;
+}
