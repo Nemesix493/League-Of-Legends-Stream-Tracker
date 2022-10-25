@@ -71,7 +71,12 @@ function calc_rank_stats(summoner_name){
 function replaceText(summoner_name){
     let result = data['accounts'][summoner_name]['text']
     result = result.replace('%summonerName%', summoner_name)
-    result = result.replace('%deltaLeaguePoints%', data['accounts'][summoner_name]['rank_stats'][data['accounts'][summoner_name]['queueType']]['deltaLeaguePoints'])
+    let deltaLeaguePoints = data['accounts'][summoner_name]['rank_stats'][data['accounts'][summoner_name]['queueType']]['deltaLeaguePoints']
+    if (deltaLeaguePoints >= 0){
+        result = result.replace('%deltaLeaguePoints%','+' + deltaLeaguePoints);
+    }else{
+        result = result.replace('%deltaLeaguePoints%',deltaLeaguePoints);
+    }
     result = result.replace('%losses%', data['accounts'][summoner_name]['rank_stats'][data['accounts'][summoner_name]['queueType']]['losses'])
     result = result.replace('%wins%', data['accounts'][summoner_name]['rank_stats'][data['accounts'][summoner_name]['queueType']]['wins'])
     result = result.replace('%played%', data['accounts'][summoner_name]['rank_stats'][data['accounts'][summoner_name]['queueType']]['played'])
